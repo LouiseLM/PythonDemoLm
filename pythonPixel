@@ -1,0 +1,67 @@
+from sense_hat import SenseHat
+from time import sleep
+from random import randint
+
+sense = SenseHat()
+
+green = (0, 255, 0)
+yellow = (255, 255, 0)
+blue = (0, 0, 255)
+red = (255, 0, 0)
+white = (255,255,255)
+nothing = (0,0,0)
+pink = (255,105, 180)
+g = (0, 255, 0)
+y = (255, 255, 0)
+b = (0, 0, 255)
+r = (255, 0, 0)
+w = (255,255,255)
+n = (0,0,0)
+p = (255,105, 180)
+def pick_random_colour():
+  random_red = randint(0, 255)
+  random_green = randint(0, 255)
+  random_blue = randint(0, 255)
+  return (random_red, random_green, random_blue)
+
+#sense.clear(pick_random_colour())
+
+#sense.set_pixel(0, 2, blue)
+#sense.set_pixel(7, 4, red)
+
+sense.set_pixel(2, 0, (255, 255, 255))
+sense.set_pixel(3, 0, (255, 255, 255))
+sense.set_pixel(4, 0, (255, 255, 255))
+sense.set_pixel(5, 0, (255, 255, 255))
+sense.set_pixel(7, 2, (255, 255, 255))
+sense.set_pixel(7, 3, (255, 255, 255))
+sense.set_pixel(7, 4, (255, 255, 255))
+sense.set_pixel(7, 5, (255, 255, 255))
+sense.set_pixel(5, 7, (255, 255, 255))
+sense.set_pixel(4, 7, (255, 255, 255))
+sense.set_pixel(3, 7, (255, 255, 255))
+sense.set_pixel(2, 7, (255, 255, 255))
+sense.set_pixel(0, 2, (255, 255, 255))
+sense.set_pixel(0, 3, (255, 255, 255))
+sense.set_pixel(0, 4, (255, 255, 255))
+sense.set_pixel(0, 5, (255, 255, 255))
+sense.set_pixel(1, 1, (255, 255, 255))
+sense.set_pixel(1, 6, (255, 255, 255))
+sense.set_pixel(6, 1, (255, 255, 255))
+sense.set_pixel(6, 6, (255, 255, 255))
+
+sense.clear()
+
+creeper_pixels = [
+    g, g, g, g, g, g, g, g,
+    g, g, g, g, g, g, g, g,
+    g, b, b, g, g, b, b, g,
+    g, b, b, g, g, b, b, g,
+    g, g, g, b, b, g, g, g,
+    g, g, b, b, b, b, g, g,
+    g, g, b, b, b, b, g, g,
+    g, g, b, g, g, b, g, g
+]
+
+# Display these colours on the LED matrix
+sense.set_pixels(creeper_pixels)
